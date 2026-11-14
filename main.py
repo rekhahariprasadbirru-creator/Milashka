@@ -1,9 +1,17 @@
+from brain import milashka_response
 
+print("================================")
+print("       MILASHKA AI")
+print("================================")
 
-print("Hello! I am Jarvis.")
-print("Project Jarvis is starting...")
+print("Hello! I am Milashka.")
 
-name = input("What is your name? ")
+while True:
+    user_message = input("You: ")
 
-print("Welcome", name)
-print("How can I help you today my dear?")
+    if user_message.lower() == "exit":
+        print("Milashka: Goodbye!")
+        break
+
+    response = milashka_response(user_message)
+    print("Milashka:", response)
